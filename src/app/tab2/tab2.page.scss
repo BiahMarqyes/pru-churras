@@ -1,14 +1,21 @@
-.divisao{
-  display: flex;
-  width: 50%;
-  float: right;
-  align-items: center;
-}
-
 .divisao2{
   display: flex;
   width: 50%;
   align-items: center;
-  float: right;
+  float: left;
   justify-content: center;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  height: 32%;
+  width: 100%;
+
+  .divisao{
+    align-items: center;
+    width: 50%;
+    float: left;
+  }
+
 }
