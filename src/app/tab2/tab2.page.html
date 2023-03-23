@@ -9,18 +9,18 @@
 <ion-content [fullscreen]="true">
   <ion-item>
     <ion-label>
-      <h1>Valendo:</h1>
+      <h1>Valendo: {{valor}}</h1>
     </ion-label>
   </ion-item>
 
   <ion-grid>
     <ion-row>
       <ion-col></ion-col>
-      <ion-col><ion-button>1</ion-button></ion-col>
-      <ion-col><ion-button>3</ion-button></ion-col>
-      <ion-col><ion-button>6</ion-button></ion-col>
-      <ion-col><ion-button>9</ion-button></ion-col>
-      <ion-col><ion-button>12</ion-button></ion-col>
+      <ion-col><ion-button (click)="bt(1)">1</ion-button></ion-col>
+      <ion-col><ion-button (click)="bt(3)">3</ion-button></ion-col>
+      <ion-col><ion-button (click)="bt(6)">6</ion-button></ion-col>
+      <ion-col><ion-button (click)="bt(9)">9</ion-button></ion-col>
+      <ion-col><ion-button (click)="bt(12)">12</ion-button></ion-col>
       <ion-col></ion-col>
     </ion-row>
   </ion-grid>
@@ -39,19 +39,19 @@
   <ion-col></ion-col>
   <ion-col></ion-col>
   <ion-col></ion-col>
-  <ion-col><ion-button>+</ion-button></ion-col>
+  <ion-col><ion-button (click)="soma1()">+</ion-button></ion-col>
   <ion-col></ion-col>
 
   <ion-item>
     <ion-label>
-      <h1>0</h1>
+      <h1>{{pontos1}}</h1>
     </ion-label>
   </ion-item>
 
     <ion-col></ion-col>
     <ion-col></ion-col>
     <ion-col></ion-col>
-    <ion-col><ion-button>-</ion-button></ion-col>
+    <ion-col><ion-button (click)="subt1()">-</ion-button></ion-col>
     <ion-col></ion-col>
 </ion-card>
 </div>
@@ -67,19 +67,19 @@
   <ion-col></ion-col>
   <ion-col></ion-col>
   <ion-col></ion-col>
-  <ion-col><ion-button>+</ion-button></ion-col>
+  <ion-col><ion-button (click)="soma2()">+</ion-button></ion-col>
   <ion-col></ion-col>
 
   <ion-item>
     <ion-label>
-      <h1>0</h1>
+      <h1>{{pontos2}}</h1>
     </ion-label>
   </ion-item>
 
     <ion-col></ion-col>
     <ion-col></ion-col>
     <ion-col></ion-col>
-    <ion-col><ion-button>-</ion-button></ion-col>
+    <ion-col><ion-button (click)="subt2()">-</ion-button></ion-col>
     <ion-col></ion-col>
 </ion-card>
 </div>
@@ -107,7 +107,7 @@
     <div class="divisao2">
       <ion-item>
         <ion-label>
-          <h1>0</h1>
+          <h1>{{time1}}</h1>
         </ion-label>
       </ion-item>
     </div>
@@ -126,7 +126,7 @@
     <div class="divisao2">
       <ion-item>
         <ion-label>
-          <h1>0</h1>
+          <h1>{{time2}}</h1>
         </ion-label>
       </ion-item>
     </div>
@@ -134,3 +134,11 @@
   </ion-card>
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar (click)="reiniciar()" color="primary">
+    <ion-title class="ion-text-center">
+      Reiniciar Jogo
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
